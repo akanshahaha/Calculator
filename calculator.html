@@ -1,0 +1,121 @@
+<html>
+<head>
+<script>
+function dis(val)
+{
+document.getElementById("edu").value+=val;
+}
+function clr()
+{
+
+document.getElementById("edu").value ="";
+document.getElementById("useinp").value ="";
+}
+function solve()
+{
+let x= document.getElementById("edu").value;
+let y = eval(x)
+document.getElementById("useinp").value = y;
+}
+
+
+</script>
+
+<style>
+body
+{
+  background:rgb(201,226,255);
+  color:rgb(42,42,42);
+  font-family: Arial,sans-serif;
+  display:flex;
+  align-items:center;
+  height:70vh;
+}
+.container
+{
+   width:350px;
+   background: #fff;
+   box-shadow: 0 20px 40px ;
+   position:absolute;
+   top:10%;
+  left:35%;
+}
+
+table
+{
+border-collapse: collapse;
+width:100%;
+}
+
+td{
+font-size: 2em;
+padding:0.7em;
+text-align: center;
+cursor:default;
+transition: 0.2s;
+}
+
+td:hover
+{
+background-color: rgb(199,199,199);
+}
+
+input{
+padding: 16px 10px;
+width:100%;
+border:0;
+font-size:2em;
+background-color:#333;
+color:#eee;
+text-align:right;
+}
+.vari{
+background-color: rgb(70,70,70);
+color:#eee;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<input type="text" id="useinp" placeholder="0">
+<input type="text" id="edu" placeholder="0">
+<table>
+
+<tr>
+<td value="+" onclick="dis('+')"> +</td>
+<td value="1" onclick="dis('1')" >1</td>
+<td value="2" onclick="dis('2')" >2</td>
+<td value="3" onclick="dis('3')" >3</td>
+</tr>
+
+<tr>
+<td value="-" onclick="dis('-')" >-</td>
+<td value="4" onclick="dis('4')" >4</td>
+<td value="5" onclick="dis('5')" >5</td>
+<td value="6" onclick="dis('6')" >6</td>
+</tr>
+
+<tr>
+<td value="*" onclick="dis('*')" >*</td>
+<td value="7" onclick="dis('7')" >7</td>
+<td value="8" onclick="dis('8')" >8</td>
+<td value="9" onclick="dis('9')" >9</td>
+</tr>
+
+<tr>
+<td value="/" onclick="dis('/')" >/</td>
+<td value="0" onclick="dis('0')" >0</td>
+<td value="." onclick="dis('.')" >.</td>
+<td onclick="solve();" class="equalbtn">=</td>
+</tr>
+
+
+<tr>
+<td colspan="4" value="c" onclick="clr();">C</td>
+</tr>
+
+</table>
+</div>
+<body>
+</html>
